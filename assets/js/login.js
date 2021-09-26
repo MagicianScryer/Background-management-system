@@ -79,7 +79,7 @@ $(function() {
                 } else if (response.status == 0) {
                     // 将登入的身份验证放到localtorage
                     localStorage.setItem('token', response.token);
-                    location.assign('/index.html');
+                    location.assign('../../index.html');
                 }
             }
         });
