@@ -46,7 +46,6 @@ function user_info_load() {
         type: "GET",
         url: "/my/userinfo",
         success: function(res) {
-            console.log(res);
             if (res.status !== 0) {
                 return layer.msg("导入基本信息失败");
             }

@@ -38,7 +38,7 @@ function renderdata(data) {
 
     // 渲染头像
     if (data.user_pic) {
-        $(".layui-nav-img").prop('src', 'data.user_pic').show();
+        $(".layui-nav-img").prop('src', data.user_pic).show();
         $(".text-avatar").hide();
     } else {
         let first = uname[0].toUpperCase();
