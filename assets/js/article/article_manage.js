@@ -41,7 +41,7 @@ $(function() {
             }
         });
     });
-
+    layer.msg("文件的删除只能删掉自己创建的文件");
     // 通过代理为编辑按钮添加弹出框的功能
     // 此处文本的get方法对于-number无效
     $("tbody").on("click", "#compile", function() {
@@ -80,7 +80,7 @@ $(function() {
     // 通过代理删除固定文本
     $("tbody").on("click", "#delet", function() {
         id = $(this).attr('data-Id');
-        layer.confirm('is not?', { icon: 3, title: '提示', offset: ['20%', '40%'] }, function(index) {
+        layer.confirm('确定删除文件?', { icon: 3, title: '提示', offset: ['20%', '40%'] }, function(index) {
             //do something
             $.ajax({
                 type: "GET",
