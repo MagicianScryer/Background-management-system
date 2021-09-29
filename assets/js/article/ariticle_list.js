@@ -55,8 +55,9 @@ $(function() {
         var id = $(this).attr('date-id');
         layer.confirm('是否确认删除?', { icon: 3, title: '提示', offset: ['300px', '600px'] }, function(index) {
             //do something
-            // 获取按钮的格式
+            // 获取按钮的长度
             var btnNum = $(".deletBtn").length;
+            console.log(btnNum);
             $.ajax({
                 type: "GET",
                 url: "/my/article/delete/" + id,
@@ -67,8 +68,9 @@ $(function() {
                     layer.msg("删除成功");
                     // 当数据删除完成后需要判断是否还有数据
                     if (btnNum == 1) {
-                        q.pagenum = q.pagenum == 1 ? 1 : q.pagenum--;
+                        q.pagenum = q.pagenum === 1 ? 1 : q.pagenum - 1;
                     }
+
                     gitArtList(q)
                 }
             });
