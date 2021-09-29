@@ -9,7 +9,7 @@ let q = {
     state: ''
 };
 
-layer.msg("编辑功能没有完成");
+
 $(function() {
 
     // 定义美化时间的过滤器
