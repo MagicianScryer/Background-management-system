@@ -24,7 +24,7 @@ $(function() {
     });
 
     // 初始化formdata
-    initFd();
+    localStorage.getItem('art') && initFd();
     // 为input：files实现功能
     $("#btnFile").on("change", function(e) {
         // 判断是否选择了文件
