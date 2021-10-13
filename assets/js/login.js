@@ -49,7 +49,7 @@ $(function() {
         //发起ajax请求
         $.ajax({
             type: "POST",
-            url: "http://api-breakingnews-web.itheima.net/api/reguser",
+            url: "http://127.0.0.1:3007/api/reguser",
             data: {
                 username: $("#newusername").val(),
                 password: $("#newpassword").val(),
@@ -71,7 +71,7 @@ $(function() {
         // 发起ajax登录请求
         $.ajax({
             type: "POST",
-            url: "http://api-breakingnews-web.itheima.net/api/login",
+            url: "http://127.0.0.1:3007/api/login",
             data: $(this).serialize(),
             success: function(response) {
                 if (response.status !== 0) {
